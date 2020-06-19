@@ -1,4 +1,4 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.utils
+package com.esgi4al.paulin.kfileexplorer.utils
 
 import android.graphics.Color
 import android.support.design.widget.Snackbar

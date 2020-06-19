@@ -1,14 +1,13 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileservice
+package com.esgi4al.paulin.kfileexplorer.fileservice
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.R
 
 class FileChangeBroadcastReceiver(val path: String, val onChange: () -> Unit) : BroadcastReceiver() {
 
     companion object {
-        const val EXTRA_PATH = "com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileservice.path"
+        const val EXTRA_PATH = "com.esgi4al.paulin.kfileexplorer.fileservice.path"
     }
 
     override fun onReceive(context: Context?, intent: Intent?) {

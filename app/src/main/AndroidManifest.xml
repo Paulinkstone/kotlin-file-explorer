@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.thetechnocafe.gurleensethi.kotlinfileexplorer">
+    package="com.esgi4al.paulin.kfileexplorer">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".main.MainActivity">
+        <activity android:name="com.esgi4al.paulin.kfileexplorer.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +22,8 @@
         </activity>
         
         <provider
-            android:authorities="com.thetechnocafe.gurleensethi.kotlinfileexplorer"
-            android:name=".GenericFileProvider"
+            android:authorities="com.esgi4al.paulin.kfileexplorer"
+            android:name="com.esgi4al.paulin.kfileexplorer.GenericFileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -31,7 +31,7 @@
                 android:resource="@xml/provider_paths"/>
         </provider>
 
-        <service android:name=".fileservice.FileIntentService" />
+        <service android:name="com.esgi4al.paulin.kfileexplorer.fileservice.FileIntentService" />
     </application>
 
 </manifest>

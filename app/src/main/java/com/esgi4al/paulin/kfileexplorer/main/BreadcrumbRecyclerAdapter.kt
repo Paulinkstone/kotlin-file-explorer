@@ -1,11 +1,11 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.main
+package com.esgi4al.paulin.kfileexplorer.main
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.R
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.models.FileModel
+import com.esgi4al.paulin.kfileexplorer.R
+import com.esgi4al.paulin.kfileexplorer.models.FileModel
 import kotlinx.android.synthetic.main.item_recycler_breadcrumb.view.*
 
 class BreadcrumbRecyclerAdapter : RecyclerView.Adapter<BreadcrumbRecyclerAdapter.ViewHolder>() {

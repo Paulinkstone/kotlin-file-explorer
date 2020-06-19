@@ -1,7 +1,6 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.models
+package com.esgi4al.paulin.kfileexplorer.models
 
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.common.FileType
-import java.io.File
+import com.esgi4al.paulin.kfileexplorer.common.FileType
 
 data class FileModel(
         val path: String,

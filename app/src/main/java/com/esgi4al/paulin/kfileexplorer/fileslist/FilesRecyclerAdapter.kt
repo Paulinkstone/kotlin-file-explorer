@@ -1,12 +1,12 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileslist
+package com.esgi4al.paulin.kfileexplorer.fileslist
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.R
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.common.FileType
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.models.FileModel
+import com.esgi4al.paulin.kfileexplorer.R
+import com.esgi4al.paulin.kfileexplorer.common.FileType
+import com.esgi4al.paulin.kfileexplorer.models.FileModel
 import kotlinx.android.synthetic.main.item_recycler_file.view.*
 
 class FilesRecyclerAdapter : RecyclerView.Adapter<FilesRecyclerAdapter.ViewHolder>() {

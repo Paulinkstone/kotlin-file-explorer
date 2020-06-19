@@ -1,4 +1,4 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer
+package com.esgi4al.paulin.kfileexplorer
 
 import org.junit.Test
 

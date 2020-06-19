@@ -1,12 +1,10 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.utils
+package com.esgi4al.paulin.kfileexplorer.utils
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.support.v4.content.FileProvider
-import android.util.Log
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.common.FileType
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.models.FileModel
+import com.esgi4al.paulin.kfileexplorer.common.FileType
+import com.esgi4al.paulin.kfileexplorer.models.FileModel
 import java.io.File
 
 fun getFileModelsFromFiles(files: List<File>): List<FileModel> {

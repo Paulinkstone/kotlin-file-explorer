@@ -1,36 +1,34 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.main
+package com.esgi4al.paulin.kfileexplorer.main
 
 import android.content.Intent
-import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.support.design.widget.BottomSheetDialog
 import android.support.v4.app.ActivityCompat
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.R
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.common.FileType
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileservice.FileChangeBroadcastReceiver
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileservice.FileIntentService
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileslist.FilesListFragment
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.models.FileModel
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.utils.createNewFile
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.utils.createNewFolder
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.utils.createShortSnackbar
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.utils.launchFileIntent
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.utils.deleteFile as FileUtilsDeleteFile
+import com.esgi4al.paulin.kfileexplorer.R
+import com.esgi4al.paulin.kfileexplorer.common.FileType
+import com.esgi4al.paulin.kfileexplorer.fileservice.FileChangeBroadcastReceiver
+import com.esgi4al.paulin.kfileexplorer.fileservice.FileIntentService
+import com.esgi4al.paulin.kfileexplorer.fileslist.FilesListFragment
+import com.esgi4al.paulin.kfileexplorer.models.FileModel
+import com.esgi4al.paulin.kfileexplorer.utils.createNewFile
+import com.esgi4al.paulin.kfileexplorer.utils.createNewFolder
+import com.esgi4al.paulin.kfileexplorer.utils.createShortSnackbar
+import com.esgi4al.paulin.kfileexplorer.utils.launchFileIntent
 import kotlinx.android.synthetic.main.activity_main.*
+import com.esgi4al.paulin.kfileexplorer.utils.deleteFile as FileUtilsDeleteFile
 import kotlinx.android.synthetic.main.dialog_enter_name.view.*
 
 class MainActivity : AppCompatActivity(), FilesListFragment.OnItemClickListener {
 
     companion object {
-        private const val OPTIONS_DIALOG_TAG: String = "com.thetechnocafe.gurleensethi.kotlinfileexplorer.main.options_dialog"
+        private const val OPTIONS_DIALOG_TAG: String = "com.esgi4al.paulin.kfileexplorer.main.options_dialog"
     }
 
     private val backStackManager = BackStackManager()
@@ -80,6 +78,8 @@ class MainActivity : AppCompatActivity(), FilesListFragment.OnItemClickListener 
         backStackManager.addToStack(fileModel = FileModel(Environment.getExternalStorageDirectory().absolutePath, FileType.FOLDER, "/", 0.0))
     }
 
+
+
     override fun onClick(fileModel: FileModel) {
         if (fileModel.fileType == FileType.FOLDER) {
             addFileFragment(fileModel)
@@ -106,10 +106,14 @@ class MainActivity : AppCompatActivity(), FilesListFragment.OnItemClickListener 
         optionsDialog.show(supportFragmentManager, OPTIONS_DIALOG_TAG)
     }
 
+
+
+
     private fun addFileFragment(fileModel: FileModel) {
         val filesListFragment = FilesListFragment.build {
             path = fileModel.path
         }
+
 
         backStackManager.addToStack(fileModel)
 
@@ -120,12 +124,14 @@ class MainActivity : AppCompatActivity(), FilesListFragment.OnItemClickListener 
         fragmentTransaction.commit()
     }
 
+
     private fun updateAdapterData(files: List<FileModel>) {
         mBreadcrumbRecyclerAdapter.updateData(files)
         if (files.isNotEmpty()) {
             breadcrumbRecyclerView.smoothScrollToPosition(files.size - 1)
         }
     }
+
 
     override fun onBackPressed() {
         if (isCopyModeActive) {
@@ -224,4 +230,5 @@ class MainActivity : AppCompatActivity(), FilesListFragment.OnItemClickListener 
         broadcastIntent.putExtra(FileChangeBroadcastReceiver.EXTRA_PATH, backStackManager.top.path)
         sendBroadcast(broadcastIntent)
     }
+
 }

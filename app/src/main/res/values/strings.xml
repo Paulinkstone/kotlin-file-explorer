@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">Kotlin File Explorer</string>
-    <string name="file_change_broadcast">com.thetechnocafe.gurleensethi.kotlinfileexplorer.file_change_broadcast</string>
+    <string name="app_name">KFileExplorer</string>
+    <string name="file_change_broadcast">com.esgi4al.paulin.kfileexplorer.file_change_broadcast</string>
 </resources>

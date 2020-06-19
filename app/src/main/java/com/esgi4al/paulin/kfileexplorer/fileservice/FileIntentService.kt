@@ -1,19 +1,18 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileservice
+package com.esgi4al.paulin.kfileexplorer.fileservice
 
 import android.app.IntentService
 import android.content.Intent
 import android.util.Log
-import android.widget.Toast
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.R
+import com.esgi4al.paulin.kfileexplorer.R
 import java.io.File
 
 class FileIntentService : IntentService("FileIntentService") {
 
     companion object {
-        const val ACTION_COPY: String = "com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileservice.copy"
+        const val ACTION_COPY: String = "com.esgi4al.paulin.kfileexplorer.fileservice.copy"
 
-        const val EXTRA_FILE_SOURCE_PATH: String = "com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileservice.source_path"
-        const val EXTRA_FILE_DESTINATION_PATH: String = "com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileservice.destination_path"
+        const val EXTRA_FILE_SOURCE_PATH: String = "com.esgi4al.paulin.kfileexplorer.fileservice.source_path"
+        const val EXTRA_FILE_DESTINATION_PATH: String = "com.esgi4al.paulin.kfileexplorer.fileservice.destination_path"
     }
 
     override fun onHandleIntent(intent: Intent?) {

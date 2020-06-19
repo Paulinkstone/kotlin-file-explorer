@@ -1,6 +1,6 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.main
+package com.esgi4al.paulin.kfileexplorer.main
 
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.models.FileModel
+import com.esgi4al.paulin.kfileexplorer.models.FileModel
 
 class BackStackManager {
     private var files = mutableListOf<FileModel>()

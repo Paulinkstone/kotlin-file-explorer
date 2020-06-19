@@ -1,5 +1,6 @@
-package com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileslist
+package com.esgi4al.paulin.kfileexplorer.fileslist
 
+//import android.app.Fragment
 import android.content.Context
 import android.content.IntentFilter
 import android.os.Bundle
@@ -9,11 +10,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.R
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileservice.FileChangeBroadcastReceiver
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.models.FileModel
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.utils.getFileModelsFromFiles
-import com.thetechnocafe.gurleensethi.kotlinfileexplorer.utils.getFilesFromPath
+import com.esgi4al.paulin.kfileexplorer.R
+import com.esgi4al.paulin.kfileexplorer.fileservice.FileChangeBroadcastReceiver
+import com.esgi4al.paulin.kfileexplorer.models.FileModel
+import com.esgi4al.paulin.kfileexplorer.utils.getFileModelsFromFiles
+import com.esgi4al.paulin.kfileexplorer.utils.getFilesFromPath
 import kotlinx.android.synthetic.main.fragment_files_list.*
 
 class FilesListFragment : Fragment() {
@@ -29,7 +30,7 @@ class FilesListFragment : Fragment() {
     }
 
     companion object {
-        private const val ARG_PATH: String = "com.thetechnocafe.gurleensethi.kotlinfileexplorer.fileslist.path"
+        private const val ARG_PATH: String = "com.esgi4al.paulin.kfileexplorer.fileslist.path"
         fun build(block: Builder.() -> Unit) = Builder().apply(block).build()
     }
 
